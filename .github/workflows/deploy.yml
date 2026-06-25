@@ -46,8 +46,9 @@ jobs:
           key: ${{ secrets.VPS_SSH_KEY }}
           port: ${{ secrets.VPS_PORT }}
           source: "backend/*"
-          target: "/var/www/aga49"
-          rm: true
+          target: "/var/www/aga49/backend"
+          strip_components: 1
+          overwrite: true
 
 
       - name: Installer backend et relancer PM2
