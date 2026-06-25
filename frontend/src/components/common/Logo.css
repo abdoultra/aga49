@@ -1,0 +1,40 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo__mark {
+  display: flex;
+  font-size: 1.7rem;
+  font-weight: 900;
+  letter-spacing: -0.18em;
+  line-height: 1;
+}
+
+.logo__mark span:nth-child(1) {
+  color: #ce1d24;
+}
+
+.logo__mark span:nth-child(2) {
+  color: #e3ad12;
+}
+
+.logo__mark span:nth-child(3) {
+  color: #0c7442;
+}
+
+.logo__copy {
+  display: grid;
+  color: var(--color-ink);
+  font-size: 0.67rem;
+  line-height: 1.15;
+}
+
+.logo__copy strong {
+  font-size: 0.72rem;
+}
+
+.logo--light .logo__copy {
+  color: #ffffff;
+}

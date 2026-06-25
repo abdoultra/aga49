@@ -1,0 +1,143 @@
+.document-modal {
+  width: min(100%, 700px);
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 30px 90px rgb(4 13 24 / 28%);
+}
+
+.document-modal > header {
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  display: flex;
+  padding: 23px 28px;
+  border-bottom: 1px solid #e8ebef;
+  background: #fff;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.document-modal > header span {
+  color: var(--color-primary);
+  font-size: .67rem;
+  font-weight: 850;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.document-modal h2 {
+  margin: 5px 0 0;
+  font-size: 1.45rem;
+}
+
+.document-modal > header button {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 50%;
+  color: #657083;
+  background: #f2f4f7;
+  place-items: center;
+}
+
+.document-modal form {
+  display: grid;
+  padding: 27px 28px 30px;
+  gap: 17px;
+}
+
+.document-form__row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.document-modal label {
+  display: grid;
+  color: #3e4757;
+  font-size: .73rem;
+  font-weight: 750;
+  gap: 7px;
+}
+
+.document-modal input,
+.document-modal select,
+.document-modal textarea {
+  width: 100%;
+  padding: 12px 13px;
+  border: 1px solid #dfe3e8;
+  border-radius: 8px;
+  background: #fff;
+  outline: 0;
+}
+
+.document-modal input:focus,
+.document-modal select:focus,
+.document-modal textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgb(215 25 32 / 9%);
+}
+
+.document-file-field > input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.document-file-field > span {
+  display: grid;
+  min-height: 125px;
+  padding: 17px;
+  border: 1px dashed #cfd5dd;
+  border-radius: 10px;
+  color: #6d7788;
+  background: #fafbfc;
+  cursor: pointer;
+  place-items: center;
+  gap: 5px;
+  text-align: center;
+}
+
+.document-file-field strong {
+  color: #3d4757;
+  font-size: .75rem;
+}
+
+.document-file-field small {
+  font-size: .65rem;
+  font-weight: 500;
+}
+
+.document-modal footer {
+  display: flex;
+  padding-top: 19px;
+  border-top: 1px solid #edf0f3;
+  justify-content: flex-end;
+  gap: 11px;
+}
+
+.document-modal footer button {
+  min-height: 45px;
+  padding: 0 19px;
+  border: 1px solid #dfe3e8;
+  border-radius: 8px;
+  color: #4c5667;
+  background: #fff;
+  font-weight: 750;
+}
+
+.document-modal footer button[type="submit"] {
+  border-color: var(--color-primary);
+  color: #fff;
+  background: var(--color-primary);
+}
+
+@media (max-width: 580px) {
+  .document-form__row {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,154 @@
+.modal-backdrop {
+  position: fixed;
+  z-index: 100;
+  display: grid;
+  padding: 24px;
+  background: rgb(7 18 31 / 64%);
+  inset: 0;
+  overflow-y: auto;
+  place-items: center;
+  backdrop-filter: blur(4px);
+}
+
+.member-modal {
+  width: min(100%, 760px);
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0 30px 90px rgb(4 13 24 / 28%);
+}
+
+.member-modal > header {
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  display: flex;
+  padding: 24px 28px;
+  border-bottom: 1px solid #e8ebef;
+  background: #ffffff;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.member-modal > header span {
+  color: var(--color-primary);
+  font-size: 0.67rem;
+  font-weight: 850;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.member-modal > header h2 {
+  margin: 5px 0 0;
+  font-size: 1.45rem;
+}
+
+.member-modal > header button {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 50%;
+  color: #657083;
+  background: #f2f4f7;
+  place-items: center;
+}
+
+.member-modal form {
+  display: grid;
+  padding: 27px 28px 30px;
+  gap: 17px;
+}
+
+.member-form__row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.member-modal label {
+  display: grid;
+  color: #3e4757;
+  font-size: 0.73rem;
+  font-weight: 750;
+  gap: 7px;
+}
+
+.member-modal input,
+.member-modal select,
+.member-modal textarea {
+  width: 100%;
+  padding: 12px 13px;
+  border: 1px solid #dfe3e8;
+  border-radius: 8px;
+  color: var(--color-ink);
+  background: #ffffff;
+  outline: 0;
+}
+
+.member-modal input:focus,
+.member-modal select:focus,
+.member-modal textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgb(215 25 32 / 9%);
+}
+
+.member-modal textarea {
+  resize: vertical;
+}
+
+.member-modal form > footer {
+  display: flex;
+  margin-top: 5px;
+  padding-top: 19px;
+  border-top: 1px solid #edf0f3;
+  justify-content: flex-end;
+  gap: 11px;
+}
+
+.member-modal form > footer button {
+  min-height: 45px;
+  padding: 0 18px;
+  border-radius: 8px;
+  font-weight: 750;
+}
+
+.member-form__cancel {
+  border: 1px solid #dfe3e8;
+  color: #4c5667;
+  background: #ffffff;
+}
+
+.member-form__submit {
+  border: 0;
+  color: #ffffff;
+  background: var(--color-primary);
+}
+
+.member-modal button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+@media (max-width: 580px) {
+  .modal-backdrop {
+    padding: 0;
+    place-items: stretch;
+  }
+
+  .member-modal {
+    max-height: none;
+    min-height: 100vh;
+    border-radius: 0;
+  }
+
+  .member-form__row {
+    grid-template-columns: 1fr;
+  }
+
+  .member-modal form > footer {
+    align-items: stretch;
+    flex-direction: column-reverse;
+  }
+}

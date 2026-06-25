@@ -1,0 +1,21 @@
+.simple-page {
+  display: grid;
+  min-height: 60vh;
+  padding: 80px 20px;
+  text-align: center;
+  place-content: center;
+}
+
+.simple-page h1 {
+  margin: 0;
+  font-size: clamp(2rem, 6vw, 4rem);
+}
+
+.simple-page p {
+  color: var(--color-muted);
+}
+
+.simple-page a {
+  color: var(--color-primary);
+  font-weight: 750;
+}

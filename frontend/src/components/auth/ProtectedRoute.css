@@ -1,0 +1,24 @@
+.auth-loader {
+  display: flex;
+  min-height: 100vh;
+  color: var(--color-muted);
+  background: #f5f7fa;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.auth-loader span {
+  width: 22px;
+  height: 22px;
+  border: 3px solid #dfe4ea;
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: auth-spin 700ms linear infinite;
+}
+
+@keyframes auth-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

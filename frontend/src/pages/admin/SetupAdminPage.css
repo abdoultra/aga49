@@ -1,0 +1,249 @@
+.setup-page {
+  display: grid;
+  min-height: 100vh;
+  background: #f5f7fa;
+  grid-template-columns: minmax(330px, 0.8fr) 1.2fr;
+}
+
+.setup-page__intro {
+  display: flex;
+  padding: 55px;
+  color: #ffffff;
+  background:
+    linear-gradient(155deg, rgb(7 33 54 / 97%), rgb(8 92 52 / 92%)),
+    url('../../assets/aga-hero.webp') center / cover;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.setup-page__intro > div {
+  max-width: 520px;
+  margin: 70px 0;
+}
+
+.setup-page__intro > div span {
+  color: #f4c430;
+  font-size: 0.74rem;
+  font-weight: 850;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.setup-page__intro h1 {
+  margin: 14px 0 20px;
+  font-size: clamp(2.5rem, 5vw, 4.7rem);
+  letter-spacing: -0.06em;
+  line-height: 0.98;
+}
+
+.setup-page__intro p {
+  color: rgb(255 255 255 / 72%);
+  line-height: 1.7;
+}
+
+.setup-page__intro ul {
+  display: grid;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  gap: 13px;
+}
+
+.setup-page__intro li {
+  display: flex;
+  color: rgb(255 255 255 / 78%);
+  align-items: center;
+  gap: 11px;
+  font-size: 0.77rem;
+}
+
+.setup-page__content {
+  display: grid;
+  padding: 50px;
+  place-items: center;
+}
+
+.setup-form {
+  display: grid;
+  width: min(100%, 620px);
+  padding: 34px;
+  border: 1px solid #e3e7ec;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 25px 65px rgb(23 32 49 / 9%);
+  gap: 17px;
+}
+
+.setup-form__heading span {
+  color: var(--color-primary);
+  font-size: 0.7rem;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.setup-form__heading h2 {
+  margin: 7px 0;
+  font-size: 2rem;
+  letter-spacing: -0.04em;
+}
+
+.setup-form__heading p {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.setup-form__row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.setup-form label {
+  display: grid;
+  color: #3d4656;
+  font-size: 0.75rem;
+  font-weight: 750;
+  gap: 7px;
+}
+
+.setup-form input {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 13px;
+  border: 1px solid #dfe3e8;
+  border-radius: 8px;
+  color: var(--color-ink);
+  outline: 0;
+}
+
+.setup-form input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgb(215 25 32 / 9%);
+}
+
+.setup-form__password {
+  position: relative;
+  display: flex;
+}
+
+.setup-form__password input {
+  padding-right: 45px;
+}
+
+.setup-form__password button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  display: grid;
+  padding: 5px;
+  border: 0;
+  color: #7d8797;
+  background: transparent;
+  place-items: center;
+  transform: translateY(-50%);
+}
+
+.setup-form > small {
+  color: #7c8696;
+  font-size: 0.68rem;
+  line-height: 1.5;
+}
+
+.setup-form > button,
+.setup-locked a {
+  display: inline-flex;
+  min-height: 50px;
+  border: 0;
+  border-radius: 8px;
+  color: #ffffff;
+  background: var(--color-primary);
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.setup-form > button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.setup-form > a {
+  color: var(--color-primary);
+  font-size: 0.75rem;
+  font-weight: 750;
+  text-align: center;
+}
+
+.setup-form__error {
+  margin: 0;
+  padding: 11px 13px;
+  border: 1px solid #f0c1c4;
+  border-radius: 7px;
+  color: #a31319;
+  background: #fff1f2;
+  font-size: 0.75rem;
+}
+
+.setup-status,
+.setup-locked {
+  color: var(--color-muted);
+  text-align: center;
+}
+
+.setup-locked {
+  display: grid;
+  width: min(100%, 480px);
+  padding: 42px;
+  border: 1px solid #e3e7ec;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0 20px 55px rgb(23 32 49 / 8%);
+  place-items: center;
+}
+
+.setup-locked svg {
+  color: var(--color-green);
+}
+
+.setup-locked h2 {
+  margin: 17px 0 8px;
+}
+
+.setup-locked p {
+  margin: 0 0 22px;
+  line-height: 1.65;
+}
+
+.setup-locked a {
+  padding: 0 20px;
+}
+
+@media (max-width: 860px) {
+  .setup-page {
+    grid-template-columns: 1fr;
+  }
+
+  .setup-page__intro {
+    min-height: 390px;
+    padding: 35px 24px;
+  }
+
+  .setup-page__intro > div {
+    margin: 45px 0;
+  }
+
+  .setup-page__content {
+    padding: 45px 20px;
+  }
+}
+
+@media (max-width: 560px) {
+  .setup-form {
+    padding: 24px 18px;
+  }
+
+  .setup-form__row {
+    grid-template-columns: 1fr;
+  }
+}

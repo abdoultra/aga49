@@ -1,0 +1,47 @@
+.settings-page { display: grid; max-width: 1500px; margin: 0 auto; padding: 30px; gap: 22px; }
+.settings-page__heading p, .admin-accounts-panel > header p { margin: 0 0 5px; color: var(--color-primary); font-size: .7rem; font-weight: 850; letter-spacing: .09em; text-transform: uppercase; }
+.settings-page__heading h1 { margin: 0; font-size: clamp(1.9rem, 4vw, 2.5rem); letter-spacing: -.045em; }
+.settings-page__heading span { display: block; margin-top: 7px; color: var(--color-muted); font-size: .8rem; }
+.settings-alert { margin: 0; padding: 12px 14px; border-radius: 8px; font-size: .77rem; }
+.settings-alert--error { border: 1px solid #f0c3c6; color: #a31319; background: #fff1f2; }
+.settings-alert--success { border: 1px solid #b9e4ca; color: #0b6b39; background: #edf9f2; }
+.settings-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.settings-card, .admin-accounts-panel, .settings-permission { border: 1px solid #e5e8ed; border-radius: 11px; background: #fff; box-shadow: 0 8px 24px rgb(26 38 55 / 4%); }
+.settings-card { display: grid; padding: 24px; gap: 16px; }
+.settings-card > header, .settings-permission { display: flex; align-items: center; gap: 13px; }
+.settings-card > header > svg, .settings-permission > svg { width: 42px; height: 42px; padding: 10px; border-radius: 50%; color: #16764a; background: #eaf8f0; }
+.settings-card h2, .settings-permission h2, .admin-accounts-panel h2 { margin: 0; font-size: 1rem; }
+.settings-card header p, .settings-permission p { margin: 4px 0 0; color: #788294; font-size: .68rem; }
+.settings-form__row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.settings-card label { display: grid; color: #3e4757; font-size: .72rem; font-weight: 750; gap: 7px; }
+.settings-card input { width: 100%; padding: 12px; border: 1px solid #dfe3e8; border-radius: 8px; outline: 0; }
+.settings-card > button { min-height: 43px; border: 0; border-radius: 8px; color: #fff; background: var(--color-primary); font-weight: 750; }
+.admin-accounts-panel { overflow: hidden; }
+.admin-accounts-panel > header { display: flex; padding: 21px 22px; border-bottom: 1px solid #e9ecf0; align-items: center; justify-content: space-between; }
+.admin-accounts-panel > header button { display: inline-flex; min-height: 42px; padding: 0 15px; border: 0; border-radius: 7px; color: #fff; background: var(--color-primary); align-items: center; gap: 7px; font-weight: 750; }
+.admin-accounts-grid { display: grid; padding: 20px; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 15px; }
+.admin-accounts-grid article { position: relative; display: grid; padding: 18px; border: 1px solid #e5e8ed; border-radius: 9px; grid-template-columns: auto 1fr; gap: 12px; }
+.admin-account-avatar { display: grid; width: 44px; height: 44px; border-radius: 50%; color: #fff; background: linear-gradient(145deg, #0c6b3f, #d9a619); font-size: .7rem; font-weight: 850; place-items: center; }
+.admin-accounts-grid article > div { display: grid; min-width: 0; gap: 3px; }
+.admin-accounts-grid strong, .admin-accounts-grid small, .admin-accounts-grid article > div span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.admin-accounts-grid small, .admin-accounts-grid article > div span { color: #7e8898; font-size: .64rem; }
+.admin-account-status, .admin-accounts-grid article > b { display: inline-flex; margin-top: 12px; padding: 5px 8px; border-radius: 999px; align-items: center; gap: 5px; font-size: .61rem; font-weight: 750; }
+.admin-account-status { grid-column: 1; }
+.admin-account-status.is-active { color: #108149; background: #eaf8f0; }
+.admin-account-status.is-inactive { color: #a66305; background: #fff5df; }
+.admin-accounts-grid article > b { color: #43516a; background: #eef2f7; justify-self: start; }
+.admin-accounts-grid footer { display: flex; margin-top: 15px; padding-top: 12px; border-top: 1px solid #edf0f3; grid-column: 1 / -1; justify-content: flex-end; gap: 6px; }
+.admin-accounts-grid footer button { display: grid; width: 33px; height: 33px; border: 1px solid #e1e5ea; border-radius: 7px; color: #596577; background: #fff; place-items: center; }
+.admin-accounts-grid footer button:last-child { color: #c91c24; }
+.settings-permission { padding: 22px; }
+.password-reset-dialog { display: grid; width: min(100%, 410px); padding: 30px; border-radius: 13px; background: #fff; box-shadow: 0 30px 90px rgb(4 13 24 / 30%); gap: 13px; text-align: center; }
+.password-reset-dialog > svg { margin: 0 auto; color: var(--color-primary); }
+.password-reset-dialog h2, .password-reset-dialog p { margin: 0; }
+.password-reset-dialog p { color: #778191; font-size: .75rem; }
+.password-reset-dialog input { padding: 12px; border: 1px solid #dfe3e8; border-radius: 8px; }
+.password-reset-dialog > div { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.password-reset-dialog button { min-height: 42px; border: 1px solid #dfe3e8; border-radius: 7px; background: #fff; font-weight: 750; }
+.password-reset-dialog button:last-child { border-color: var(--color-primary); color: #fff; background: var(--color-primary); }
+@media (max-width: 1050px) { .admin-accounts-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 760px) { .settings-page { padding: 24px 16px; } .settings-columns, .admin-accounts-grid { grid-template-columns: 1fr; } }
+@media (max-width: 520px) { .settings-form__row { grid-template-columns: 1fr; } .admin-accounts-panel > header { align-items: stretch; flex-direction: column; gap: 14px; } }
