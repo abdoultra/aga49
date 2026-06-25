@@ -35,7 +35,7 @@ jobs:
           source: "frontend/dist/*"
           target: "/var/www/aga49/frontend"
           strip_components: 2
-          rm: true
+          overwrite: true
 
 
       - name: Envoyer backend sur VPS
