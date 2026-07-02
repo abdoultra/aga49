@@ -63,6 +63,8 @@ jobs:
           script: |
             cd /var/www/aga49/backend
             npm install
+
+            npm run bootstrap:super-admin || echo "Bootstrap super admin ignore ou deja effectue"
             
             pm2 restart aga-api || pm2 start server.js --name aga-api
             
