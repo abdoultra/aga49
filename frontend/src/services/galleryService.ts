@@ -23,7 +23,7 @@ const toFormData = (values: AlbumPayload | PhotoPayload) => {
 
 export const getAlbums = async (signal?: AbortSignal): Promise<Album[]> => {
   const { data } = await api.get('/albums', { signal })
-  return data.albums
+  return Array.isArray(data.albums) ? data.albums : []
 }
 
 export const getAlbum = async (

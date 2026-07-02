@@ -29,7 +29,7 @@ export const getLatestPublications = async (
     params: { status: 'published' },
     signal,
   })
-  return data.publications
+  return Array.isArray(data.publications) ? data.publications : []
 }
 
 export const getUpcomingEvents = async (
@@ -39,7 +39,7 @@ export const getUpcomingEvents = async (
     params: { type: 'event', upcoming: true },
     signal,
   })
-  return data.publications
+  return Array.isArray(data.publications) ? data.publications : []
 }
 
 export const getPublicPublications = async (
@@ -47,7 +47,7 @@ export const getPublicPublications = async (
   signal?: AbortSignal,
 ): Promise<Publication[]> => {
   const { data } = await api.get('/publications', { params, signal })
-  return data.publications
+  return Array.isArray(data.publications) ? data.publications : []
 }
 
 export const getPublicPublication = async (
@@ -60,14 +60,14 @@ export const getPublicPublication = async (
 
 export const getAlbums = async (signal?: AbortSignal): Promise<Album[]> => {
   const { data } = await api.get('/albums', { signal })
-  return data.albums
+  return Array.isArray(data.albums) ? data.albums : []
 }
 
 export const getBoardMembers = async (
   signal?: AbortSignal,
 ): Promise<Admin[]> => {
   const { data } = await api.get('/admin/board', { signal })
-  return data.admins
+  return Array.isArray(data.admins) ? data.admins : []
 }
 
 export const getAlbumDetails = async (

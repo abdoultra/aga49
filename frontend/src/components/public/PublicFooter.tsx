@@ -54,7 +54,19 @@ function PublicFooter() {
         </div>
       </div>
       <div className="public-footer__bottom">
-        © 2026 Association des Guinéens d&apos;Angers. Tous droits réservés.
+        <span>
+          © 2026 Association des Guinéens d&apos;Angers. Tous droits réservés.
+        </span>
+        <span>
+          Site fait par{' '}
+          <a
+            href="https://abdoultra.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Abdoultra
+          </a>
+        </span>
       </div>
     </footer>
   )

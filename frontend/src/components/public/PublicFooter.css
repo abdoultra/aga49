@@ -54,10 +54,22 @@
 }
 
 .public-footer__bottom {
+  display: flex;
   padding: 18px 20px;
   border-top: 1px solid rgb(255 255 255 / 12%);
   font-size: 0.74rem;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
   text-align: center;
+  flex-wrap: wrap;
+}
+
+.public-footer__bottom a {
+  color: #ffffff;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 @media (max-width: 820px) {
@@ -69,5 +81,11 @@
 @media (max-width: 520px) {
   .public-footer__grid {
     grid-template-columns: 1fr;
+  }
+
+  .public-footer__bottom {
+    align-items: center;
+    flex-direction: column;
+    gap: 7px;
   }
 }

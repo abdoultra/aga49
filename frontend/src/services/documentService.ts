@@ -33,14 +33,14 @@ export const getAdminDocuments = async (
   signal?: AbortSignal,
 ): Promise<DocumentResource[]> => {
   const { data } = await api.get('/documents/manage', { signal })
-  return data.documents
+  return Array.isArray(data.documents) ? data.documents : []
 }
 
 export const getPublishedDocuments = async (
   signal?: AbortSignal,
 ): Promise<DocumentResource[]> => {
   const { data } = await api.get('/documents', { signal })
-  return data.documents
+  return Array.isArray(data.documents) ? data.documents : []
 }
 
 export const createDocument = async (
