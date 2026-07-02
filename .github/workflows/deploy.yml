@@ -20,6 +20,8 @@ jobs:
 
       - name: Installer et build frontend
         working-directory: ./frontend
+        env:
+          VITE_API_URL: https://api.aga49.com
         run: |
           npm install
           npm run build
